@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    background: #018DED url(img/leaf-4631370_1920.jpg);
+    background-size: cover;
+    font-family:  "Poppins", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+  }
+
+  body {
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .clock {
+    width: 20rem;
+    height: 20rem;
+    border: 28px solid rgb(126, 160, 88);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align-last: center;
+    position: relative;   
+    margin: 50px 0 0 55%;
+  }
+
+  .clock span{
+    position: absolute;
+    width: 113%;
+    height: 113%;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  
+  .hand {
+    width: 50%;
+    height: 6px;
+    background: black;
+    position: absolute;
+    bottom: 50%;
+    transform-origin: bottom;
+    border-radius: 10px;
+    transform:rotate(90deg);
+    transition: all 0.05s;
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1)
+  }
+
+  .hour-hand {
+    width: 8px;
+    height: 35%;
+    z-index: 1;
+  }
+
+  .min-hand{
+    width: 8px;
+    height: 40%;
+    z-index: 2;
+  }
+
+.second-hand {
+  width: 4px;
+  height: 45%;
+  z-index: 3;
+  background-color: rgb(141, 81, 41);
+}
+
+.clock::after{
+  content: "";
+  width: 10px;
+  height: 10px;
+  z-index: 4;
+  background-color: black;
+  border-radius: 50%;
+  border: 2px solid rgb(141, 81, 41);
+}
+
+@media(max-width: 834px)  {
+  html{
+    background-image: url(img/nature-6815417_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;  
+  }
+  
+  .clock{
+      width: 25rem;
+      height: 25rem;
+      background-color: aliceblue;    
+      border: 10px solid rgb(214, 216, 223); 
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align-last: center;
+      position: relative;   
+      margin: 250px 0px 0 0 ;
+  }
+
+  .clock span{
+    width: 100%;
+    height: 100%;
+    font-size: 24px;
+    font-weight: 800;
+  }
+
+  .second-hand {
+    background-color: rgb(241, 150, 89);
+  }
+
+  .clock::after{
+    border: 2px solid rgb(241, 150, 89);
+  }
+ 
+}
